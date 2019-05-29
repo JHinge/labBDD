@@ -29,4 +29,10 @@ public class OptimalItinerarySteps {
     public void shouldBeInformedAbout(@Transform(JodaLocalTimeConverter.class) List<LocalTime> expectedTrainTimes) {
         throw new PendingException();
     }
+    @Zakładając("^chcę się dostać z \"(.*)\" do \"(.*)\"")
+    public void givenRoute(String departure, String destination) {
+        throw new PendingException();
+
+    }
+    
 }
