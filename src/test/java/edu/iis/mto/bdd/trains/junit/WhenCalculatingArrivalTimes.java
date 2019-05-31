@@ -35,8 +35,6 @@ public class WhenCalculatingArrivalTimes {
         when(timetableService.findLinesThrough("Parramatta", "Town Hall")).thenReturn(lines);
        // List<LocalTime> times = timetableService.findArrivalTimes(line, targetStation);
         List<LocalTime> times = new ArrayList<>();
-        times.add(new LocalTime(7, 58));
-        times.add(new LocalTime(8, 00));
         times.add(new LocalTime(8, 2));
         times.add(new LocalTime(8, 11));
         times.add(new LocalTime(8, 14));
