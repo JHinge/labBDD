@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.equalTo;;
 
 public class OptimalItinerarySteps {
 
-    private IntineraryService intineraryService = new IntineraryService();
+    private IntineraryService intineraryService;//= new IntineraryService();
     private LocalTime startTime;
     private String destination;
     private String departure;

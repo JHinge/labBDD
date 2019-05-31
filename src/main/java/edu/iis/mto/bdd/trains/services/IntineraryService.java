@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.joda.time.LocalTime;
 
-public class IntineraryService {
-    public List<LocalTime> findNextDepartures(String departure, String destination, LocalTime startTime) {
-        return null;
-    }
+public interface IntineraryService {
+     List<LocalTime> findNextDepartures(String departure, String destination, LocalTime startTime);
+
+    
 
 }
