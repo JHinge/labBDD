@@ -20,8 +20,7 @@ public class OptimalItinerarySteps {
     }
 
     @Gdy("^chcę podróżować z \"([^\"]*)\" do \"([^\"]*)\" o (.*)$")
-    public void whenIWantToTravel(String departure, String destination,
-            @Transform(JodaLocalTimeConverter.class) LocalTime startTime) {
+    public void whenIWantToTravel(String departure, String destination, @Transform(JodaLocalTimeConverter.class) LocalTime startTime) {
         throw new PendingException();
     }
 
@@ -29,10 +28,5 @@ public class OptimalItinerarySteps {
     public void shouldBeInformedAbout(@Transform(JodaLocalTimeConverter.class) List<LocalTime> expectedTrainTimes) {
         throw new PendingException();
     }
-    @Zakładając("^chcę się dostać z \"(.*)\" do \"(.*)\"")
-    public void givenRoute(String departure, String destination) {
-        throw new PendingException();
 
-    }
-    
 }
