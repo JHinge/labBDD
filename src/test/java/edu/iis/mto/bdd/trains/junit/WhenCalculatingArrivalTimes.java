@@ -37,8 +37,7 @@ public class WhenCalculatingArrivalTimes {
         List<LocalTime> times = new ArrayList<>();
         times.add(new LocalTime(8, 2));
         times.add(new LocalTime(8, 11));
-        times.add(new LocalTime(8, 14));
-        times.add(new LocalTime(8, 21));     
+        times.add(new LocalTime(8, 14));    
         when(timetableService.findArrivalTimes(line, "Parramatta")).thenReturn(times);
         
         List<LocalTime> proposedTrainTimes = intineraryService.findNextDepartures("Parramatta", "Town Hall", new LocalTime(8, 00));

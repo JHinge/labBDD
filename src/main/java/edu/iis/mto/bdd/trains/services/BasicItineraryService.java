@@ -22,7 +22,7 @@ public class BasicItineraryService implements IntineraryService {
     public List<LocalTime> findNextDepartures(String departure, String destination, LocalTime departureTime) {
         Line line = timetableService.findLinesThrough(departure, destination).get(0);
         return timetableService.findArrivalTimes(line, departure).stream()
-                .filter(time -> time.isAfter(departureTime) && time.isBefore(departureTime.plusMinutes(25)))
+                .filter(time -> time.isAfter(departureTime) && time.isBefore(departureTime.plusMinutes(15)))
                 .collect(Collectors.toList());
     }
 
