@@ -13,7 +13,7 @@ import edu.iis.mto.bdd.trains.model.Line;
 
 public class BasicItineraryService implements IntineraryService {
     private final InMemoryTimetableService timetableService;
-
+    private static final int MAXIMAL_TIME_TO_NEXT_DEPARTURE = 30;
     public BasicItineraryService(InMemoryTimetableService timetableService) {
         this.timetableService = timetableService;
     }
@@ -22,7 +22,7 @@ public class BasicItineraryService implements IntineraryService {
     public List<LocalTime> findNextDepartures(String departure, String destination, LocalTime departureTime) {
         Line line = timetableService.findLinesThrough(departure, destination).get(0);
         return timetableService.findArrivalTimes(line, departure).stream()
-                .filter(time -> time.isAfter(departureTime) && time.isBefore(departureTime.plusMinutes(15)))
+                .filter(time -> time.isAfter(departureTime) && time.isBefore(departureTime.plusMinutes(MAXIMAL_TIME_TO_NEXT_DEPARTURE)))
                 .collect(Collectors.toList());
     }
 
