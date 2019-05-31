@@ -9,3 +9,9 @@ Funkcja: Informacja dla podróżnych o czasie przybycia do stacji docelowej
 		I następny pociąg odjeżdża o 8:02 na linii Western
 		Gdy zapytam o godzinę przyjazdu
 		Wtedy powinienem uzyskać następujący szacowany czas przyjazdu: 8:29
+		
+	Szablon scenariusza: Szacowanie czasu przyjazdu 
+						Zakładając chcę się dostać z <początek> do <koniec>
+						I następny pociąg odjeżdża o <czasodjazdu> na linii <linia>
+						Gdy zapytam o godzinę przyjazdu
+						Wtedy powinienem uzyskać następujący szacowany czas przyjazdu: <czasprzyjazdu>
